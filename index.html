@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-h"></i>
+                    <div class="logo-text">Harkirat Singh</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="images/main_photo.jpg" alt="profile pic">
+                </div>
+                <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Data Scientist</span></h5>
+                    <h1>Harkirat Singh</h1>
+                    <p> Ambitious and Strategic Leader | Innovation Catalyst | Focused on leveraging technology to create business value and growth
+                    </p>
+
+                    <div class="btn-group">
+                       <a href="#portfolio" class="btn active">Portfolio</a>
+                       <a href="#contact" class="btn">Contact</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/harkiratsinghpz/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/harkiratsinghpz/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/harkiratsinghpzz" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio" class="portfolio-section">
+        <div class="wrapper">
+            <h2>Portfolio</h2>
+            <div class="portfolio-container">
+                <div class="portfolio-item">
+                    <img src="images/portfolio1.jpg" alt="Project 1">
+                    <h3>AWS Cloud Infrastructure Deployment & Migration </h3>
+                    <p>Designed and deployed a scalable web application using AWS services, ensuring high availability and security with load balancing and auto-scaling.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfolio2.jpg" alt="Project 2">
+                    <h3>Diabetes Prediction Model using Logistic Regression</h3>
+                    <p>Created a predictive model to assess diabetes risk using logistic regression and exploratory data analysis, achieving a 75% accuracy rate and informing healthcare decisions</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfolio3.jpg" alt="Project 3">
+                    <h3>Video Search App using Google API</h3>
+                    <p>Built a user-friendly React.js app with Google API integration for efficient video searches, utilizing debouncing for seamless video playback and search results.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfolio4.jpg" alt="Project 4">
+                    <h3>Email Spam Detection</h3>
+                    <p>Developed a robust system to classify emails as spam or non-spam using machine learning models, achieving a 90% accuracy rate and improving email security.
+                    </p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfolio5.jpg" alt="Project 5">
+                    <h3>Quiz App using React.js and State Management</h3>
+                    <p>Developed a dynamic Quiz App using React.js with state management and hooks, enhancing user interaction and question progression with a responsive interface.
+                    </p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfolio6.jpg" alt="Project 6">
+                    <h3>Elderly Mobility Analysis using Python and IoT</h3>
+                    <p>Analyzed elderly mobility patterns using Python and IoT devices, visualizing data to monitor and improve mobility trends and informing healthcare interventions for the elderly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="contact-section">
+        <div class="wrapper">
+            <h2>Contact(Email Me For Resume)</h2>
+            <div class="contact-info">
+                <p>Email: singhharkirat79345@gmail.com</p>
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/harkiratsinghpz/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/harkiratsinghpz/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/harkiratsinghpzz" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        /** creating button click show hide navbar **/
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+        var links = document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed = new Typed(".input", {
+            strings: ["Data Scientist", "Software Developer", "Web Developer"],
+            typedSpeed: 70,
+            backSpeed: 55,
+            loop: true
+        })
+    </script>
+</body>
+</html>
