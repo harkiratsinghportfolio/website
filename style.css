@@ -1,419 +1,716 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    font-family: poppins, sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Portfolio Website Design</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-</head>
-<body>
-    <div class="hero-header">
-        <div class="wrapper">
-            <header>
-                <div class="logo">
-                    <i class="fa-solid fa-h"></i>
-                    <div class="logo-text">Harkirat Singh</div>
-                </div>
-                <nav>
-                    <div class="togglebtn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <ul class="navlinks">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <div class="container">
-                <div class="hero-pic">
-                    <img src="images/main_photo.jpg" alt="profile pic">
-                </div>
-                <div class="hero-text">
-                    <h5>Hi I'm <span class="input">Data Scientist</span></h5>
-                    <h1>Harkirat Singh</h1>
-                    <p> Ambitious and Strategic Leader | Innovation Catalyst | Focused on leveraging technology to create business value and growth
-                    </p>
-
-                    <div class="btn-group">
-                       <a href="#portfolio" class="btn active">Portfolio</a>
-                       <a href="#contact" class="btn">Contact</a>
-                    </div>
-
-                    <div class="social">
-                        <a href="https://www.linkedin.com/in/harkiratsinghpz/"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/harkiratsinghpz/"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://github.com/harkiratsinghpzz" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
 
 
 
 
 
+.hero-header {
+    width: 100%;
+    min-height: 100vh;
+    background: #222;
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    padding: 40px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo i {
+    height: 45px;
+    width: 45px;
+    background-color: #007ced;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.logo .logo-text {
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* nav .togglebtn {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 45px;
+    right: 3%;
+    z-index: 5;
+    cursor: pointer;
+    display: none;
+}
+
+nav .togglebtn span {
+    display: block;
+    background-color: #007ced;
+    margin: 5px 0px;
+    width: 100%;
+    height: 3px;
+    transition: 0.3s;
+    transition-property: transform, opacity;
+} */
+
+
+nav .togglebtn {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+nav .togglebtn span {
+    display: block;
+    width: 35px;
+    height: 3px;
+    background-color: #007ced;
+    margin: 5px 0;
+}
+
+
+
+nav .navlinks {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav .navlinks li {
+    display: inline-block;
+}
+
+nav .navlinks li a {
+    color: #e5e5e5;
+    margin-right: 2.5rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 4rem;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container .hero-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 15px solid #444;
+    box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.hero-pic img {
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.hero-pic img:hover {
+    transform: scale(1.2);
+}
+
+.hero-text {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.hero-text h5 {
+    color: #e5e5e5;
+    font-size: 14px;
+}
+
+.hero-text h5 span {
+    color: #007ced;
+    font-size: 16px;
+}
+
+.hero-text h1 {
+    color: #007ced;
+    font-size: 3rem;
+}
+
+.hero-text p {
+    color: #e5e5e5;
+}
+
+.btn-group {
+    margin: 45px 0;
+}
+
+.btn-group .btn {
+    border-color: #d5d5d5;
+    color: #fff;
+    background-color: #333;
+    padding: 12px 25px;
+    margin: 5px 0px;
+    margin-right: 7px;
+    border-radius: 30px;
+    border: 2px solid #e5e5e5;
+    box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+}
+
+.btn.active {
+    border-color: #007ced;
+}
+
+.hero-text .social i {
+    color: #e5e5e5;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+.hero-text .social i:hover {
+    color: #007ced;
+    transform: rotate(360deg);
+}
+
+
+
+/* Portfolio Section */
+.portfolio-section {
+    background: #f4f4f4;
+    padding: 60px 0;
+}
+
+.portfolio-section h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.portfolio-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.portfolio-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.portfolio-img img:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-content {
+    padding: 20px;
+}
+
+.portfolio-content h3 {
+    font-size: 22px;
+    color: #007ced;
+    margin-bottom: 10px;
+}
+
+.portfolio-content p {
+    color: #666;
+    font-size: 16px;
+}
 
 
 
 
+/* Portfolio Section
+.portfolio-section {
+    background: #f4f4f4;
+    padding: 60px 0;
+    overflow-x: hidden;
+}
 
+.portfolio-section h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+}
 
+.portfolio-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
 
+.portfolio-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.3s;
+    margin: 0 10px;
+}
 
+.portfolio-item:hover {
+    transform: translateY(-10px);
+}
 
-    <div id="portfolio" class="portfolio-section">
-        <div class="wrapper">
-            <h2>Portfolio</h2>
-            <div class="portfolio-container">
-                <!-- Project Item -->
-                <div class="portfolio-item">
-                    <div class="portfolio-img">
-                        <img src="images/portfolio1.jpg" alt="AWS Cloud Infrastructure Deployment & Migration">
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>AWS Cloud Infrastructure Deployment & Migration</h3>
-                        <p>Designed and deployed a scalable web application using AWS services, ensuring high availability and security with load balancing and auto-scaling.</p>
-                    </div>
-                </div>
-    
-                <!-- Project Item -->
-                <div class="portfolio-item">
-                    <div class="portfolio-img">
-                        <img src="images/portfolio2.jpg" alt="Diabetes Prediction Model using Logistic Regression">
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Diabetes Prediction Model using Logistic Regression</h3>
-                        <p>Created a predictive model to assess diabetes risk using logistic regression and exploratory data analysis, achieving a 75% accuracy rate and informing healthcare decisions.</p>
-                    </div>
-                </div>
-    
-                <!-- Project Item -->
-                <div class="portfolio-item">
-                    <div class="portfolio-img">
-                        <img src="images/portfolio3.jpg" alt="Video Search App using Google API">
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Video Search App using Google API</h3>
-                        <p>Built a user-friendly React.js app with Google API integration for efficient video searches, utilizing debouncing for seamless video playback and search results.</p>
-                    </div>
-                </div>
-    
-                <!-- Project Item -->
-                <div class="portfolio-item">
-                    <div class="portfolio-img">
-                        <img src="images/portfolio4.jpg" alt="Email Spam Detection">
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Email Spam Detection</h3>
-                        <p>Developed a robust system to classify emails as spam or non-spam using machine learning models, achieving a 90% accuracy rate and improving email security.</p>
-                    </div>
-                </div>
-    
-                <!-- Project Item -->
-                <div class="portfolio-item">
-                    <div class="portfolio-img">
-                        <img src="images/portfolio5.jpg" alt="Quiz App using React.js and State Management">
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Quiz App using React.js and State Management</h3>
-                        <p>Developed a dynamic Quiz App using React.js with state management and hooks, enhancing user interaction and question progression with a responsive interface.</p>
-                    </div>
-                </div>
-    
-                <!-- Project Item -->
-                <div class="portfolio-item">
-                    <div class="portfolio-img">
-                        <img src="images/portfolio6.jpg" alt="Elderly Mobility Analysis using Python and IoT">
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Elderly Mobility Analysis using Python and IoT</h3>
-                        <p>Analyzed elderly mobility patterns using Python and IoT devices, visualizing data to monitor and improve mobility trends and informing healthcare interventions for the elderly.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
 
+.portfolio-item h3 {
+    font-size: 24px;
+    color: #007ced;
+    margin: 15px 0;
+}
 
+.portfolio-item p {
+    color: #666;
+    padding: 0 20px 20px;
+} */
 
+/* Contact Section */
+.contact-section {
+    background: #222;
+    padding: 60px 0;
+    color: #e5e5e5;
+    overflow-x: hidden;
+}
 
+.contact-section h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 40px;
+}
 
+.contact-info {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
 
-<!-- 
-    <div id="portfolio" class="portfolio-section">
-        <div class="wrapper">
-            <h2>Portfolio</h2>
-            <div class="portfolio-container">
-                <div class="portfolio-item">
-                    <img src="images/portfolio1.jpg" alt="Project 1">
-                    <h3>AWS Cloud Infrastructure Deployment & Migration </h3>
-                    <p>Designed and deployed a scalable web application using AWS services, ensuring high availability and security with load balancing and auto-scaling.</p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="images/portfolio2.jpg" alt="Project 2">
-                    <h3>Diabetes Prediction Model using Logistic Regression</h3>
-                    <p>Created a predictive model to assess diabetes risk using logistic regression and exploratory data analysis, achieving a 75% accuracy rate and informing healthcare decisions</p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="images/portfolio3.jpg" alt="Project 3">
-                    <h3>Video Search App using Google API</h3>
-                    <p>Built a user-friendly React.js app with Google API integration for efficient video searches, utilizing debouncing for seamless video playback and search results.</p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="images/portfolio4.jpg" alt="Project 4">
-                    <h3>Email Spam Detection</h3>
-                    <p>Developed a robust system to classify emails as spam or non-spam using machine learning models, achieving a 90% accuracy rate and improving email security.
-                    </p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="images/portfolio5.jpg" alt="Project 5">
-                    <h3>Quiz App using React.js and State Management</h3>
-                    <p>Developed a dynamic Quiz App using React.js with state management and hooks, enhancing user interaction and question progression with a responsive interface.
-                    </p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="images/portfolio6.jpg" alt="Project 6">
-                    <h3>Elderly Mobility Analysis using Python and IoT</h3>
-                    <p>Analyzed elderly mobility patterns using Python and IoT devices, visualizing data to monitor and improve mobility trends and informing healthcare interventions for the elderly.</p>
-                </div>
-            </div>
-        </div>
-    </div> -->
+.contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
 
+.contact-info .social i {
+    font-size: 2rem;
+    margin: 0 10px;
+    transition: 0.5s;
+}
 
+.contact-info .social i:hover {
+    color: #007ced;
+    transform: scale(1.2);
+}
 
-<!-- Experience Section -->
-<!-- Experience Section -->
-<div id="experience" class="experience-section">
-    <div class="wrapper">
-        <h2>Experience</h2>
-        <div class="experience-container">
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-            <div class="experience-box">
-                <h3>Software Engineering Fellow</h3>
-                <p>Headstarter AI (July 2024 - Aug 2024)</p>
-                <ul>
-                    <li>Built 5+ Al apps and APis using NextJS, OpenAl, Pinecone, StripeAPI with 98% accuracy as seen by 1000 user.</li>
-                    <li> Developed projects from design to deployment leading 4+ engineering fellows using MVC design patterns.</li>
-                    <li>Coached by Amazon, Bloomberg and Capital One engineers on Agile, CI/CD, Git and microservice patterns.</li>
-                </ul>
-            </div>
+.contact-section .form-group {
+    margin-bottom: 20px;
+}
 
+.contact-section label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ccc;
+}
 
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #444;
+    color: #e5e5e5;
+}
 
+.contact-section button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #007ced;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
 
+.contact-section button:hover {
+    background: #005bb5;
+}
 
-            <div class="experience-box">
-                <h3>Data Engineering Analyst</h3>
-                <p>CIBC (May 2024 - Aug 2024)</p>
-                <ul>
-                    <li>Selected for prestigious Summer Innovation Challenge and Spark Program (36/500 candidates).</li>
-                    <li>Proposed AI-driven automation solutions for Risk Management Operations, presenting to CEO and executive judges.</li>
-                    <li>Improved reporting accuracy by 30% and data quality/compliance by 25% using data analysis and governance tools.</li>
-                    <li>Developed Business Capability Model, created language filters in Tableau, and implemented Gitlab CI/CD pipelines with Docker and Terraform.</li>
-                </ul>
-            </div>
-            <div class="experience-box">
-                <h3>Software Developer</h3>
-                <p>McMaster University (Aug 2023 - April 2024)</p>
-                <ul>
-                    <li>Developed a Python application to analyze steps recorded by IoT devices for elderly individuals.</li>
-                    <li>Used libraries such as NumPy, pandas, matplotlib, and seaborn for data collection, processing, and visualization to monitor and improve mobility patterns.</li>
-                </ul>
-            </div>
-            <div class="experience-box">
-                <h3>Research Assistant</h3>
-                <p>McMaster University (May 2023 - Aug 2023)</p>
-                <ul>
-                    <li>Taught 100+ summer school students in functional programming (Elm), providing mentorship and support to enhance their understanding and application of programming principles.</li>
-                    <li>Contributed to the development of research papers focused on the Elm widgets library.</li>
-                </ul>
-            </div>
-            
-        </div>
-    </div>
-</div>
+/* Responsive design & displaying navbar for small screens */
+@media (max-width: 768px) {
+    nav .togglebtn {
+        display: initial;
+    }
 
+    .click {
+        top: 45px;
+    }
 
+    .click span {
+        position: absolute;
+        margin-top: 12px;
+    }
 
+    .click span:first-child {
+        transform: rotate(-40deg);
+    }
 
+    .click span:nth-child(2) {
+        opacity: 0;
+        margin: 0;
+    }
 
+    .click span:last-child {
+        transform: rotate(45deg);
+        top: 0;
+    }
 
+    nav .navlinks {
+        position: absolute;
+        top: 110px;
+        right: -100%;
+        bottom: 0;
+        width: 60%;
+        height: 100vh;
+        background-color: #222;
+        z-index: 3;
+        box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.1);
+        transition: 0.5s;
+        padding: 25px 0px;
+        overflow-x: hidden;
+    }
 
-<!-- Skills Section 
-<div id="skills" class="skills-section">
-    <div class="wrapper">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skill-box">
-                <h3>Programming Languages</h3>
-                <ul>
-                    <li>Python, C, Java, PHP, JavaScript, Bash, HTML, CSS, Elm (functional programming), HCL, YAML</li>
-                </ul>
-            </div>
-            <div class="skill-box">
-                <h3>Tools/Technologies</h3>
-                <ul>
-                    <li>AWS, GCP, Linux, Shell Scripting, Git, Tableau, Power BI, Jira, Confluence, SQL, React.js, Bootstrap,
-MongoDB, WordPress, Canva, Microsoft Office, DevOps tools (Jenkins, Docker, Datadog, Bitbucket)</li>
-                </ul>
-            </div>
-            <div class="skill-box">
-                <h3>Ml Libraries</h3>
-                <ul>
-                    <li>NumPy, Pandas, Seaborn, Matplotlib, Scikit learn, SciPy, Keras, TensorFlow, PyTorch, EDA, Supervised &
-                        unsupervised models</li>
-                </ul>
-            </div>
-            <div class="skill-box">
-                <h3>Soft Skills</h3>
-                <ul>
-                    <li>Scrum/Agile and Waterfall methodologies, verbal and written communication, teamwork, time management</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div> -->
+    nav .navlinks li {
+        display: block;
+    }
 
+    nav .navlinks li a {
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+    }
 
-<div id="skills" class="skills-section">
-    <div class="wrapper">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skill-box">
-                <h3>Programming Languages</h3>
-                <ul>
-                    <li>Python</li>
-                    <li>C</li>
-                    <li>Java</li>
-                    <li>PHP</li>
-                    <li>JavaScript</li>
-                    <li>Bash</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Elm (functional programming)</li>
-                    <li>HCL</li>
-                    <li>YAML</li>
-                </ul>
-            </div>
-            <div class="skill-box">
-                <h3>Tools & Technologies</h3>
-                <ul>
-                    <li>AWS</li>
-                    <li>GCP</li>
-                    <li>Linux</li>
-                    <li>Shell Scripting</li>
-                    <li>Git</li>
-                    <li>Tableau</li>
-                    <li>Power BI</li>
-                    <li>Jira</li>
-                    <li>Confluence</li>
-                    <li>SQL</li>
-                    <li>React.js</li>
-                    <li>Bootstrap</li>
-                    <li>MongoDB</li>
-                    <li>WordPress</li>
-                    <li>Canva</li>
-                    <li>Microsoft Office</li>
-                    <li>DevOps tools (Jenkins, Docker, Datadog, Bitbucket)</li>
-                </ul>
-            </div>
-            <div class="skill-box">
-                <h3>Machine Learning Libraries</h3>
-                <ul>
-                    <li>NumPy</li>
-                    <li>Pandas</li>
-                    <li>Seaborn</li>
-                    <li>Matplotlib</li>
-                    <li>Scikit learn</li>
-                    <li>SciPy</li>
-                    <li>Keras</li>
-                    <li>TensorFlow</li>
-                    <li>PyTorch</li>
-                    <li>EDA</li>
-                    <li>Supervised & unsupervised models</li>
-                </ul>
-            </div>
-            <div class="skill-box">
-                <h3>Soft Skills</h3>
-                <ul>
-                    <li>Scrum/Agile and Waterfall methodologies</li>
-                    <li>Verbal and written communication</li>
-                    <li>Teamwork</li>
-                    <li>Time management</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
+    nav .navlinks.open {
+        right: 0;
+    }
+}
 
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding-top: 2rem;
+    }
 
+    .container .hero-pic {
+        width: 250px;
+        height: 250px;
+    }
 
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
 
+    .portfolio-item {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto 20px;
+    }
 
+    .contact-section form {
+        padding: 15px;
+    }
+}
 
+/* Skills Section */
+.skills-section {
+    background: #f4f4f4;
+    padding: 60px 0;
+    overflow-x: hidden;
+}
 
-    <div id="contact" class="contact-section">
-        <div class="wrapper">
-            <h2>Contact(Email Me For Resume)</h2>
-            <div class="contact-info">
-                <p>Email: singhharkirat79345@gmail.com</p>
-                <div class="social">
-                    <a href="https://www.linkedin.com/in/harkiratsinghpz/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/harkiratsinghpz/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://github.com/harkiratsinghpzz" target="_blank"><i class="fa-brands fa-github"></i></a>
-                </div>
-            </div>
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
-    </div>
+.skills-section h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
-    <script>
-        /** creating button click show hide navbar **/
-        var togglebtn = document.querySelector(".togglebtn");
-        var nav = document.querySelector(".navlinks");
-        var links = document.querySelector(".navlinks li");
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 100%;
+}
 
-        togglebtn.addEventListener("click", function(){
-            this.classList.toggle("click");
-            nav.classList.toggle("open");
-        })
+.skill-box {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    margin: 20px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
 
-        var typed = new Typed(".input", {
-            strings: ["Data Scientist", "Software Developer", "Web Developer"],
-            typedSpeed: 70,
-            backSpeed: 55,
-            loop: true
-        })
-    </script>
-</body>
-</html>
+.skill-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 124, 237, 0.1);
+    transform: scale(0);
+    transition: transform 0.3s;
+    z-index: 1;
+}
 
+.skill-box:hover::before {
+    transform: scale(1);
+}
+
+.skill-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skill-box h3 {
+    font-size: 24px;
+    color: #007ced;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border-bottom: 2px solid #007ced;
+    padding-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.skill-box ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.skill-box ul li {
+    font-size: 16px;
+    color: #333;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skill-box ul li:nth-child(1) { --i: 1; }
+.skill-box ul li:nth-child(2) { --i: 2; }
+.skill-box ul li:nth-child(3) { --i: 3; }
+.skill-box ul li:nth-child(4) { --i: 4; }
+.skill-box ul li:nth-child(5) { --i: 5; }
+.skill-box ul li:nth-child(6) { --i: 6; }
+.skill-box ul li:nth-child(7) { --i: 7; }
+.skill-box ul li:nth-child(8) { --i: 8; }
+.skill-box ul li:nth-child(9) { --i: 9; }
+.skill-box ul li:nth-child(10) { --i: 10; }
+.skill-box ul li:nth-child(11) { --i: 11; }
+
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-box {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
+
+/* Experience Section */
+/* Experience Section */
+.experience-section {
+    background: #222;
+    padding: 60px 0;
+    color: #e5e5e5;
+    overflow-x: hidden;
+}
+
+.experience-section h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.experience-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 20px; /* Added padding to prevent overflow */
+}
+
+.experience-box {
+    background: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: calc(33.333% - 20px); /* Adjusted for margins */
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+}
+
+.experience-box h3 {
+    font-size: 24px;
+    color: #007ced;
+    margin-bottom: 15px;
+}
+
+.experience-box p {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.experience-box ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.experience-box li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #aaa;
+}
+
+.experience-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.experience-box:hover h3 {
+    color: #00bfff;
+}
+
+/* Responsive design for Skills and Experience Sections */
+
+@media (max-width: 768px) {
+    .experience-container {
+        flex-direction: column;
+        padding: 0; /* Remove padding on smaller screens */
+    }
+
+    .experience-box {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto 20px;
+    }
+}
 
 
 
