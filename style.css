@@ -83,6 +83,8 @@ nav .togglebtn span {
 
 nav .navlinks {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav .navlinks li {
@@ -100,6 +102,8 @@ nav .navlinks li a {
     align-items: center;
     padding-top: 4rem;
     flex-wrap: wrap;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .container .hero-pic {
@@ -127,6 +131,7 @@ nav .navlinks li a {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin: 0 20px;
 }
 
 .hero-text h5 {
@@ -184,6 +189,7 @@ nav .navlinks li a {
 .portfolio-section {
     background: #f4f4f4;
     padding: 60px 0;
+    overflow-x: hidden;
 }
 
 .portfolio-section h2 {
@@ -197,6 +203,7 @@ nav .navlinks li a {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .portfolio-item {
@@ -208,6 +215,7 @@ nav .navlinks li a {
     text-align: center;
     overflow: hidden;
     transition: 0.3s;
+    margin: 0 10px;
 }
 
 .portfolio-item:hover {
@@ -231,11 +239,12 @@ nav .navlinks li a {
     padding: 0 20px 20px;
 }
 
-
+/* Contact Section */
 .contact-section {
     background: #222;
     padding: 60px 0;
     color: #e5e5e5;
+    overflow-x: hidden;
 }
 
 .contact-section h2 {
@@ -354,6 +363,7 @@ nav .navlinks li a {
         box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.1);
         transition: 0.5s;
         padding: 25px 0px;
+        overflow-x: hidden;
     }
 
     nav .navlinks li {
@@ -377,18 +387,19 @@ nav .navlinks li a {
         padding-top: 2rem;
     }
 
-    .hero-text {
-        padding: 40px 0px;
+    .container .hero-pic {
+        width: 250px;
+        height: 250px;
     }
 
-    .portfolio-container {
-        flex-direction: column;
-        align-items: center;
+    .hero-text h1 {
+        font-size: 2.5rem;
     }
 
     .portfolio-item {
         width: 100%;
         max-width: 350px;
+        margin: 0 auto 20px;
     }
 
     .contact-section form {
