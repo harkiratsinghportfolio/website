@@ -16,7 +16,6 @@ body {
 
 
 
-
 .hero-header {
     width: 100%;
     min-height: 100vh;
@@ -753,6 +752,8 @@ nav .navlinks li a {
 
     .togglebtn {
         display: block; /* Show the hamburger menu button */
+
+        
     }
 
     .togglebtn span {
@@ -771,11 +772,11 @@ nav .navlinks li a {
     }
 
     .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .hero-text p {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .btn-group .btn {
@@ -797,11 +798,11 @@ nav .navlinks li a {
     }
 
     .portfolio-content h3 {
-        font-size: 21px;
+        font-size: 18px;
     }
 
     .portfolio-content p {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .contact-section form {
@@ -832,16 +833,16 @@ nav .navlinks li a {
 /* For screens 480px and below (mobile phones) */
 @media (max-width: 480px) {
 
-    .hero-text h3 {
-        font-size: 16px;
+    .hero-text h5 {
+        font-size: 12px;
     }
 
     .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
 
     .hero-text p {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .portfolio-img {
