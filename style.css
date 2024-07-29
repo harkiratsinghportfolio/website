@@ -324,7 +324,7 @@ nav .navlinks li a {
 }
 
 /* Responsive design & displaying navbar for small screens */
-@media (max-width: 930px) {
+@media (max-width: 768px) {
     nav .togglebtn {
         display: initial;
     }
